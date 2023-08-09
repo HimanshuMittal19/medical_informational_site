@@ -1,0 +1,129 @@
+﻿@model IEnumerable<RegisterViewModels>
+
+@{
+    ViewBag.Title = "Admin Dashbaord";
+}
+
+
+@section Styles{
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
+    <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.dataTables.min.css" rel="stylesheet" />
+    @*<link href="~/lib/datatables/css/datatables.bootstrap.min.css" rel="stylesheet" />*@
+    @*<link href="~/lib/datatables/css/jquery.datatables.min.css" rel="stylesheet" />*@
+}
+
+<div class="table-responsive border-bottom"
+     data-toggle="lists"
+     data-lists-values='["js-lists-values-employee-name"]'>
+
+    @*<div class="search-form  search-form--light m-3">
+    <input type="text"
+    class="form-control search"
+    placeholder="Search">
+    <button class="btn"
+    type="button">
+    <i class="material-icons">search</i>
+    </button>
+    </div>
+    <div class="search-form search-form--light m-3">
+    <select class="form-control" name="page" id="pageSize">
+    <option value="10">10</option>
+    <option value="20">20</option>
+    <option value="30">30</option>
+    <option value="40">40</option>
+    </select>
+    </div>*@
+
+    <table class="table mb-0 thead-border-top-0" id="registrationsList">
+        <thead>
+            <tr>
+                <th style="width: 150px;">Name</th>
+                <th style="width: 150px;">Institute Name</th>
+                <th style="width: 37px;">Email</th>
+                <th style="width: 80px;">Address</th>
+            </tr>
+        </thead>
+        <tbody class="list">
+        </tbody>
+    </table>
+</div>
+
+@section Scripts{
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: '@Url.Action("GetDashboardTable","Admin")',
+                contentType: 'application/json',
+                success: function (d) {
+                    //alert(d);
+                }
+            }).done(function (data) {
+                //alert(data);
+                var date = new Date();
+                var val = date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
+                $('#registrationsList').dataTable({
+                    "aaData": JSON.parse(data),
+                    "bJQueryUI": true,
+                    dom: 'Bfrtip',
+                    buttons: [
+                        {
+                            extend: 'excel',
+                            filename: 'Dashboard_R-Cat_' + val
+                        },
+                        {
+                            extend: 'pdf',
+                            filename: 'Dashboard_R-Cat_' + val
+                        }
+                    ],
+                    "columns": [
+                        { "data": "Name" },
+                        { "data": "InstituteName" },
+                        { "data": "Email" },
+                        { "data": "Address" },
+                    ]
+                });
+            });
+        });
+    </script>
+}
+@section navigationbar{
+    <div class="container-fluid page__heading-container">
+        <div class="page__heading d-flex align-items-end">
+            <div class="flex">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a asp-action="Dashboard" asp-controller="Admin">Home</a></li>
+                        <li class="breadcrumb-item active"
+                            aria-current="page">Dashboard</li>
+                    </ol>
+                </nav>
+                <h1 class="m-0">Dashboard</h1>
+            </div>
+            @*<div class="flatpickr-wrapper ml-3">
+        <div id="recent_orders_date"
+        data-toggle="flatpickr"
+        data-flatpickr-wrap="true"
+        data-flatpickr-mode="range"
+        data-flatpickr-alt-format="d/m/Y"
+        data-flatpickr-date-format="d/m/Y">
+        <a href="javascript:void(0)"
+        class="link-date"
+        data-toggle>13/03/2018 to 20/03/2018</a>
+        <input class="flatpickr-hidden-input"
+        type="hidden"
+        value="13/03/2018 to 20/03/2018"
+        data-input>
+        </div>
+        </div>*@
+        </div>
+    </div>
+    }
+
