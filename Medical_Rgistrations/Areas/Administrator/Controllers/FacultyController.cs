@@ -29,6 +29,7 @@ namespace Medical_Rgistrations.Controllers
             this._hosting = hostingEnvironment;
             this._Config = config;
         }
+        [Route("DeleteFaculty")]
         [HttpPost]
         public async Task<ApiResponse> DeleteFaculty(string id)
         {
@@ -52,7 +53,7 @@ namespace Medical_Rgistrations.Controllers
             }
             return apiResponse;
         }
-
+        [Route("FacultyActive")]
         [HttpPost]
         public async Task<JsonResult> FacultyActive(MassActive massActive)
         {
@@ -79,7 +80,7 @@ namespace Medical_Rgistrations.Controllers
         }
 
 
-
+        [Route("Admin-Faculty")]
         [HttpGet]
         public async Task<IActionResult> FacultyMaster()
         {
@@ -89,7 +90,7 @@ namespace Medical_Rgistrations.Controllers
 
             return View(model);
         }
-        //[Route("PostFaculty")]
+        [Route("PostFaculty")]
         [HttpPost]
         public async Task<IActionResult> FacultyMaster(FacultyViewModel faculty)
         {
@@ -140,7 +141,7 @@ namespace Medical_Rgistrations.Controllers
 
             return View(faculty);
         }
-
+        [Route("EditFaculties")]
         [HttpGet]
         public async Task<IActionResult> EditFaculty(string id)
         {
@@ -228,7 +229,7 @@ namespace Medical_Rgistrations.Controllers
 
         //    return View();
         //}
-
+        [Route("UpdateFaculties")]
         [HttpPost]
         public async Task<IActionResult> UpdateFaculty(FacultyEditViewModel faculty)
         {
@@ -285,7 +286,7 @@ namespace Medical_Rgistrations.Controllers
             return View("EditFaculty", faculty);
         }
 
-
+        [Route("UploadFaculties")]
         public async Task<string> Upload(IFormFile file)
         {
             string filename = null;
@@ -313,7 +314,7 @@ namespace Medical_Rgistrations.Controllers
             return filename;
         }
 
-
+        [Route("PopulateFaculties")]
         public async Task<JsonResult> PopulateFaculties()
         {
             var jsonresponse = new ApiResponse();

@@ -34,7 +34,7 @@ namespace Medical_Rgistrations.Areas.Admin.Controllers
 
 
         [Route("MyDashboards")]
-        public async Task<ApiResponse> GetDashboardTable()
+        public async Task<JsonResult> GetDashboardTable()
         {
             apiResponse = new ApiResponse();
             try
@@ -52,14 +52,15 @@ namespace Medical_Rgistrations.Areas.Admin.Controllers
                 {
                     apiResponse = JsonConvert.DeserializeObject<ApiResponse>(response.Content);
 
-                    return apiResponse;
+                    return Json(apiResponse.Data);
                 }
             }
             catch (Exception e)
             {
                 throw e;
             }
-            return apiResponse;
+            return Json(apiResponse.Data);
+
         }
 
         [Route("GetAllLinkList")]
