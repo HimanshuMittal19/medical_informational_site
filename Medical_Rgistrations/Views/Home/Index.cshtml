@@ -1,0 +1,146 @@
+﻿@model MyHtmlContent
+
+@{
+    ViewBag.title = "Dashboard";
+
+    List<string> filesUrl = new List<string>();
+
+    @if (Model != null)
+    {
+
+        if (Model.imgages != null)
+        {
+            var files = Model.imgages.fileName.Split('#');
+
+            if (files.Length > 0)
+            {
+                for (int i = files.Length; i-- > 0;)
+                {
+                    var actualUrl = "/Image_Gallary/" + files[i];
+                    filesUrl.Add(actualUrl);
+                }
+            }
+
+        }
+    }
+
+}
+
+<!-- Carousel Start -->
+<div class="container-fluid p-0">
+    <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            @{
+                var index = 0;
+
+                @foreach (var item in filesUrl)
+                {
+                    if (index == 0)
+                    {
+                        <div class="carousel-item active">
+                            <img class="w-100" src="@item" asp-append-version="true" alt="Image">
+
+                            @if (Model != null)
+                            {
+                                @Html.Raw(Model.HtmlData)
+                            }
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="carousel-item">
+                            @if (!@item.ToLower().Contains(".jpg") && !@item.ToLower().Contains(".png") && !@item.ToLower().Contains(".jpeg"))
+                            {
+                                <video class="w-100" loop autoplay muted>
+                                    <source src="@item" type="video/mp4" />
+                                </video>
+                                //@if (Model != null)
+                                //{
+                                //    @Html.Raw(Model.HtmlData)
+                                //}
+                            }
+                            else
+                            {
+                                <img class="w-100" src="@item" asp-append-version="true" alt="Image">
+
+                                @if (Model != null)
+                                {
+                                    @Html.Raw(Model.HtmlData)
+                                }
+                            }
+                        </div>
+                    }
+                    index++;
+                }
+            }
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+        data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+        data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+<!-- Carousel End -->
+<!-- Banner Start -->
+<div class="container-fluid banner mb-5 ">
+    <div class="container">
+        <div class="row gx-0 boxsdiv" style="box-shadow: 0 21px 26px 0 #99999959;">
+            <div class="col-lg-4 wow zoomIn" data-wow-delay="0.1s">
+                <div class="bg-primary d-flex flex-column p-3" style="height: 300px;">
+                    <h3 class="text-white mb-3">
+                        Important Notification
+                    </h3>
+                    <div class="d-flex justify-content-between text-white mb-3">
+                        <marquee onMouseOver="this.stop()" onMouseOut="this.start()" scrollamount="4" direction="up">
+                            <ul>
+                                @if (Model != null && Model.ImportentNotification.Any())
+                                    @foreach (var item in Model.ImportentNotification)
+                                    {
+                                        <li> <a class="text-white" target="_blank" href="@item.link">@item.Name</a> </li>
+                                    }
+                                
+                            </ul>
+                        </marquee>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-lg-4 wow zoomIn" data-wow-delay="0.3s">
+                <div class="bg-dark d-flex flex-column p-3" style="height: 300px;">
+                    <h3 class="text-white mb-3">
+                        Extra Digital Resources
+                    </h3>
+
+                    <a class="btn btn-light" asp-action="Registration" asp-controller="Home">Apply Now</a>
+                </div>
+            </div>
+            <div class="col-lg-4 wow zoomIn" data-wow-delay="0.6s">
+                <div class="bg-secondary d-flex flex-column p-3" style="height: 300px;">
+                    <h3 class="text-white mb-3">
+                        Downloads
+                    </h3>
+                    <div class="d-flex justify-content-between text-white mb-3">
+                        <marquee onMouseOver="this.stop()" onMouseOut="this.start()" scrollamount="4" direction="up">
+                            <ol>
+                                @if (Model != null && Model.DownloadLinks.Any())
+                                    @foreach (var item in Model.DownloadLinks)
+                                    {
+                                        <li> <a class="text-white" target="_blank" href="@item.link">@item.Name</a> </li>
+                                    }
+                            </ol>
+                        </marquee>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Banner Start -->

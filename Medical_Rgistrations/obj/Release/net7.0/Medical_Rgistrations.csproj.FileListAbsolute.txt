@@ -1,0 +1,106 @@
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\appsettings.Development.json
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\appsettings.json
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\libman.json
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\Medical_Rgistrations.staticwebassets.runtime.json
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\Medical_Rgistrations.exe
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\Medical_Rgistrations.deps.json
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\Medical_Rgistrations.runtimeconfig.json
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\Medical_Rgistrations.dll
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\Medical_Rgistrations.pdb
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\DNTCaptcha.Core.dll
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\HarfBuzzSharp.dll
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\Newtonsoft.Json.dll
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\RestSharp.dll
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\SkiaSharp.dll
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\SkiaSharp.HarfBuzz.dll
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\System.Drawing.Common.dll
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\System.Security.Permissions.dll
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\runtimes\osx\native\libHarfBuzzSharp.dylib
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\runtimes\win-arm64\native\libHarfBuzzSharp.dll
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\runtimes\win-x64\native\libHarfBuzzSharp.dll
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\runtimes\win-x86\native\libHarfBuzzSharp.dll
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\runtimes\osx\native\libSkiaSharp.dylib
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\runtimes\win-arm64\native\libSkiaSharp.dll
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\runtimes\win-x64\native\libSkiaSharp.dll
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\runtimes\win-x86\native\libSkiaSharp.dll
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\Medical_Rgistrations.csproj.AssemblyReference.cache
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\Medical_Rgistrations.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\Medical_Rgistrations.AssemblyInfoInputs.cache
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\Medical_Rgistrations.AssemblyInfo.cs
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\Medical_Rgistrations.csproj.CoreCompileInputs.cache
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\Medical_Rgistrations.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\Medical_Rgistrations.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\Medical_Rgistrations.RazorAssemblyInfo.cache
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\Medical_Rgistrations.RazorAssemblyInfo.cs
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\staticwebassets\msbuild.Medical_Rgistrations.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\staticwebassets\msbuild.build.Medical_Rgistrations.props
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\staticwebassets\msbuild.buildMultiTargeting.Medical_Rgistrations.props
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\staticwebassets\msbuild.buildTransitive.Medical_Rgistrations.props
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\staticwebassets.pack.json
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\staticwebassets.build.json
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\staticwebassets.development.json
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\scopedcss\bundle\Medical_Rgistrations.styles.css
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\scopedcss\projectbundle\Medical_Rgistrations.bundle.scp.css
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\Medical_Rgistrations.csproj.CopyComplete
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\Medical_Rgistrations.dll
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\refint\Medical_Rgistrations.dll
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\Medical_Rgistrations.pdb
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\Medical_Rgistrations.genruntimeconfig.cache
+C:\Users\HP\Source\Repos\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\ref\Medical_Rgistrations.dll
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\appsettings.Development.json
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\appsettings.json
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\libman.json
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\Medical_Rgistrations.staticwebassets.runtime.json
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\Medical_Rgistrations.exe
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\Medical_Rgistrations.deps.json
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\Medical_Rgistrations.runtimeconfig.json
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\Medical_Rgistrations.dll
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\Medical_Rgistrations.pdb
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\DNTCaptcha.Core.dll
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\HarfBuzzSharp.dll
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\Newtonsoft.Json.dll
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\RestSharp.dll
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\SkiaSharp.dll
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\SkiaSharp.HarfBuzz.dll
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\System.Drawing.Common.dll
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\System.Security.Permissions.dll
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\runtimes\osx\native\libHarfBuzzSharp.dylib
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\runtimes\win-arm64\native\libHarfBuzzSharp.dll
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\runtimes\win-x64\native\libHarfBuzzSharp.dll
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\runtimes\win-x86\native\libHarfBuzzSharp.dll
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\runtimes\osx\native\libSkiaSharp.dylib
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\runtimes\win-arm64\native\libSkiaSharp.dll
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\runtimes\win-x64\native\libSkiaSharp.dll
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\runtimes\win-x86\native\libSkiaSharp.dll
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\bin\Release\net7.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\Medical_Rgistrations.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\Medical_Rgistrations.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\Medical_Rgistrations.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\Medical_Rgistrations.AssemblyInfo.cs
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\Medical_Rgistrations.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\Medical_Rgistrations.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\Medical_Rgistrations.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\Medical_Rgistrations.RazorAssemblyInfo.cache
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\Medical_Rgistrations.RazorAssemblyInfo.cs
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\staticwebassets\msbuild.Medical_Rgistrations.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\staticwebassets\msbuild.build.Medical_Rgistrations.props
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\staticwebassets\msbuild.buildMultiTargeting.Medical_Rgistrations.props
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\staticwebassets\msbuild.buildTransitive.Medical_Rgistrations.props
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\staticwebassets.pack.json
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\staticwebassets.build.json
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\staticwebassets.development.json
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\scopedcss\bundle\Medical_Rgistrations.styles.css
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\scopedcss\projectbundle\Medical_Rgistrations.bundle.scp.css
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\Medical_Rgistrations.csproj.CopyComplete
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\Medical_Rgistrations.dll
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\refint\Medical_Rgistrations.dll
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\Medical_Rgistrations.pdb
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\Medical_Rgistrations.genruntimeconfig.cache
+C:\Users\HP\Desktop\New folder\Medical_Rgistrations_Main1\Medical_Rgistrations\obj\Release\net7.0\ref\Medical_Rgistrations.dll
