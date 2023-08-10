@@ -73,7 +73,13 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
                 <a asp-action="Course" asp-controller="Home" class="nav-item nav-link">Course</a>
-                <a asp-action="Faculty" asp-controller="Home" class="nav-item nav-link">Our Team</a>
+                <div class="dropdown">
+                    <a class="nav-item nav-link">Our Team</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" asp-action="Faculty" asp-controller="Home" asp-route-facultyType="uk">UK faculty</a>
+                        <a class="dropdown-item" asp-action="Faculty" asp-controller="Home" asp-route-facultyType="sms">SMS team</a>
+                    </div>
+                </div>
                 <a asp-action="Faculty" asp-controller="Home" class="nav-item nav-link">Resources</a>
                 @*<a asp-action="Faculty" asp-controller="Home" class="nav-item nav-link">Testimonial</a>*@
                 <a asp-action="ContactUs" asp-controller="Home" class="nav-item nav-link">Contact us</a>

@@ -307,7 +307,19 @@ namespace Medical_Rgistrations.Controllers
 
             return View(model);
         }
-
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ContactUs(MyHtmlContent model)
+        {
+            ModelState.Remove("Page");
+            ModelState.Remove("HtmlData");
+            ModelState.Remove("TemplateName");
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("ContactUs", "Home");
+            }
+            return View();
+        }
 
         public async Task<IActionResult> ContactUs()
         {
@@ -395,7 +407,7 @@ namespace Medical_Rgistrations.Controllers
         }
 
 
-        public async Task<IActionResult> Faculty()
+        public async Task<IActionResult> Faculty(string facultyType = "")
         {
             var model = new List<FacultyViewModel>();
 
@@ -405,7 +417,7 @@ namespace Medical_Rgistrations.Controllers
 
                 restsharpClient.SetBasicAuthenticator(api_username, api_password);
 
-                var restClient = await restsharpClient.GetClientInstance("/Faculty/GetFaculties");
+                var restClient = await restsharpClient.GetClientInstance("/Faculty/GetFaculties?facultyType=" + facultyType);
 
                 var response = await restClient.GetAsync(restsharpClient._request);
 
