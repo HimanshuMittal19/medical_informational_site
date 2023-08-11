@@ -385,7 +385,7 @@
             <div class="mdk-drawer-layout js-mdk-drawer-layout"
                  data-push
                  data-responsive-width="992px">
-                <div class="mdk-drawer-layout__content page">
+                <div class="mdk-drawer-layout__content page" style="transform: translate3d(0px, 0px, 0px);height: 100% !important;">
 
                     @RenderSection("navigationbar",false)
 
@@ -448,6 +448,12 @@
                                         </li>*@
                                         <li class="sidebar-menu-item">
                                             <a class="sidebar-menu-button"
+                                               asp-action="MenuMaster" asp-controller="Menu" asp-area="Administrator">
+                                                <span class="sidebar-menu-text">Menu Master</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button"
                                                asp-action="FacultyMaster" asp-controller="Faculty" asp-area="Administrator">
                                                 <span class="sidebar-menu-text">Faculty Master</span>
                                             </a>
@@ -472,6 +478,7 @@
                                                 <span class="sidebar-menu-text">Links Master</span>
                                             </a>
                                         </li>
+                                        
 
                                         @* <li class="sidebar-menu-item">
                                         <a class="sidebar-menu-button"

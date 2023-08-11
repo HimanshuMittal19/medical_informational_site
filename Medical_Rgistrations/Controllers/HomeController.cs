@@ -210,6 +210,29 @@ namespace Medical_Rgistrations.Controllers
             }
             return model;
         }
+        public async Task<List<MenuApiVM>> GetMenuList()
+        {
+            var model = new List<MenuApiVM>();
+
+            RestsharpClient restsharpClient = new RestsharpClient(apiBaseUrl);
+            restsharpClient.SetBasicAuthenticator(api_username, api_password);
+
+            var restClient = await restsharpClient.GetClientInstance("/Menu/GetMenusList");
+
+            var response = await restClient.GetAsync(restsharpClient._request);
+
+            if (response.IsSuccessStatusCode)
+            {
+                apiResponse = JsonConvert.DeserializeObject<ApiResponse>(response.Content);
+
+                if (apiResponse.Success)
+                {
+                    model = JsonConvert.DeserializeObject<List<MenuApiVM>>(apiResponse.Data);
+                }
+
+            }
+            return model;
+        }
 
         public async Task<MyHtmlContent> GetDashboardLinks()
         {

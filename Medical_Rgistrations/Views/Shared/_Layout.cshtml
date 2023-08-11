@@ -4,6 +4,7 @@
 @{
     var data = await _home.GetDashboardLinks();
     var htmlcontent = await _home.GetDashboardTemplate();
+    var loadMenu = await _home.GetMenuList();
 }
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -72,7 +73,22 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
-                <a asp-action="Course" asp-controller="Home" class="nav-item nav-link">Course</a>
+                @foreach (var item in loadMenu)
+                {
+                    <a asp-action="@item.MenuName" asp-controller="@item.ControllerName" class="nav-item nav-link">@item.MenuName</a>
+                    if (item.MenuVMs != null && item.MenuVMs.Count > 0)
+                    {
+                        @foreach (var item1 in item.MenuVMs)
+                        {
+                            <div class="dropdown">
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a asp-action="@item1.ActionName" asp-controller="@item1.ControllerName" class="nav-item nav-link">@item1.MenuName</a>
+                                </div>
+                            </div>
+                        }
+                    }
+                }
+                @*<a asp-action="Course" asp-controller="Home" class="nav-item nav-link">Course</a>
                 <div class="dropdown">
                     <a class="nav-item nav-link">Our Team</a>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -81,11 +97,8 @@
                     </div>
                 </div>
                 <a asp-action="Faculty" asp-controller="Home" class="nav-item nav-link">Resources</a>
-                @*<a asp-action="Faculty" asp-controller="Home" class="nav-item nav-link">Testimonial</a>*@
                 <a asp-action="ContactUs" asp-controller="Home" class="nav-item nav-link">Contact us</a>
-                @*<a asp-action="Faculty" asp-controller="Home" class="nav-item nav-link">Basket</a>*@
-                <a asp-action="AboutUs" asp-controller="Home" class="nav-item nav-link">About</a>
-                @*<a asp-action="Dashboard" asp-controller="Admin" asp-area="Administrator" class="nav-item nav-link">Admin</a>*@
+                <a asp-action="AboutUs" asp-controller="Home" class="nav-item nav-link">About</a>*@
             </div>
             <!--<button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>-->
             <a asp-action="Registration" asp-controller="Home" class="btn btn-primary py-2 px-4 ms-3">Apply Now</a>

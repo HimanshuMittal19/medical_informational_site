@@ -1,0 +1,244 @@
+﻿@model MenuApisVM
+@{
+    Layout = "_AdminLayout";
+    var parentList = ViewBag.ParentMenuNameList as List<string>;
+}
+@section Styles{
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
+    <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.dataTables.min.css" rel="stylesheet" />
+    @*<link href="~/lib/datatables/css/datatables.bootstrap.min.css" rel="stylesheet" />*@
+    @*<link href="~/lib/datatables/css/jquery.datatables.min.css" rel="stylesheet" />*@
+}
+<button type="button"
+        style="margin-block-end: 50px;"
+        class="btn btn-primary float-end float-right"
+        data-toggle="modal"
+        data-target="#modal-signup">
+    <span class="material-icons">add</span>
+</button>
+
+<!-- Sign Up Modal -->
+<div id="modal-signup"
+     class="modal fade"
+     tabindex="-1"
+     role="dialog"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="px-3">
+                    <div class="d-flex justify-content-center mt-2 mb-4 navbar-light">
+                        <a href="index.html"
+                           class="navbar-brand"
+                           style="min-width: 0">
+                            <span>AddEditMenu</span>
+                        </a>
+                    </div>
+
+                    <form asp-action="SaveMenu" asp-controller="Menu" method="post">
+                        <div class="form-group">
+                            <label asp-for="ParentMenuName">Parent Menu</label>
+                            <input class="form-control" asp-for="ParentMenuName"
+                                   type="text"
+                                   list="username" />
+                            @if (parentList.Count > 0)
+                            {
+                                <datalist id="username">
+                                    @foreach (var item in parentList)
+                                    {
+                                    <option value="@item"></option>
+                                    }
+                                </datalist>
+                            }
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="MenuName">Sub Menu</label>
+                            <input class="form-control" asp-for="MenuName"
+                                   type="text"
+                                   id="email"
+                                   required="" />
+                            
+                        </div>
+                        @*<div class="form-group">
+                            <label asp-for="ControllerName">Controller</label>
+                            <input class="form-control" asp-for="ControllerName"
+                                   type="text"
+                                   required=""
+                                   id="password" />
+                        </div>*@
+                        <div class=" form-group col-md-6">
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-input" type="checkbox" asp-for="Active" />
+                                    <label asp-for="Active" class=""></label>
+                                    <span class="text-danger" asp-validation-for="Active"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group text-center">
+                            <button class="btn btn-primary"
+                                    type="submit">
+                                Create Menu
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div> <!-- // END .modal-body -->
+        </div> <!-- // END .modal-content -->
+    </div> <!-- // END .modal-dialog -->
+</div> <!-- // END .modal -->
+<div class="table-responsive border-bottom"
+     data-toggle="lists"
+     data-lists-values='["js-lists-values-employee-name"]'>
+
+    @* <div class="search-form search-form--light m-3">
+    <input type="text"
+    class="form-control search"
+    placeholder="Search">
+    <button class="btn"
+    type="button">
+    <i class="material-icons">search</i>
+    </button>
+    </div>*@
+
+
+
+    <table class="table mb-0 thead-border-top-0" id="menuList">
+        <thead>
+            <tr>
+                <th style="width: 150px;">Active</th>
+                <th style="width: 150px;">Menu Name</th>
+                <th style="width: 37px;"> Parent Menu Name</th>
+                <th style="width: 24px;"></th>
+            </tr>
+        </thead>
+        <tbody class="list">
+        </tbody>
+    </table>
+</div>
+@section Scripts{
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: '@Url.Action("GetMenus","Menu")',
+                contentType: 'application/json',
+                success: function (d) {
+                    //alert(d);
+                }
+            }).done(function (data) {
+                //alert(data);
+                var date = new Date();
+                var val = date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
+                $('#menuList').dataTable({
+                    "aaData": JSON.parse(data),
+                    "bJQueryUI": true,
+                    'columnDefs': [{
+                        'targets': 0,
+                        'searchable': false,
+                        'orderable': false,
+                        'className': 'sorting_1 ',
+                        'render': function (data, type, full, meta) {
+                            var checked = "";
+                            if (data)
+                                checked = "checked";
+
+                            return '<input type="checkbox" class="mastUpdateCheck" name="id[]" data-id="' + full['MenuId'] + '" value="' + data + '" ' + checked + '>';
+                        }
+                    }],
+                    "columns": [
+                        { "data": "Active" },
+                        { "data": "MenuName" },
+                        { "data": "ParentMenuName" },
+                        {
+                            "mData": "Name",
+                            "mRender": function (data, type, row) {
+                                var url = '@Url.Action("MenuMaster","Menu")' + "?id=" + row['MenuId'];
+                                return "<a href='' class" + url + "><i class='material-icons'>edit</i></a>";
+                            }
+                        }
+                    ]
+                });
+            });
+            $(document).on('click', '.mastUpdateCheck', function (e) {
+                var checkValue = $(this).is(":checked");
+                var id = $(this).data('id');
+                var obj = {
+                    "Active": checkValue,
+                    "Id": id
+                };
+                $.ajax({
+                    type: "POST",
+                    contentType: 'application/x-www-form-urlencoded; charset=UTF-8', // when we use .serialize() this generates the data in query string format. this needs the default contentType (default content type is: contentType: 'application/x-www-form-urlencoded; charset=UTF-8') so it is optional, you can remove it
+                    dataType: 'json',
+                    url: '@Url.Action("MenuActive","Menu")',
+                    data: obj,
+                    success: function (response) {
+                        if (response.success) {
+                            //alert(response.message);
+                            //UpdateFaculties();
+                        }
+                    },
+                    failure: function (response) {
+                        alert(response.message);
+                    },
+                    error: function (response) {
+                        alert(response.message);
+                    }
+                });
+
+            });
+            $(document).on('click', '.mastUpdateCheck', function (e) {
+                var checkValue = $(this).is(":checked");
+                var id = $(this).data('id');
+                var obj = {
+                    "Active": checkValue,
+                    "Id": id
+                };
+                $.ajax({
+                    type: "POST",
+                    contentType: 'application/x-www-form-urlencoded; charset=UTF-8', // when we use .serialize() this generates the data in query string format. this needs the default contentType (default content type is: contentType: 'application/x-www-form-urlencoded; charset=UTF-8') so it is optional, you can remove it
+                    dataType: 'json',
+                    url: '@Url.Action("MenuActive","Menu")',
+                    data: obj,
+                    success: function (response) {
+                        if (response.success) {
+                            //alert(response.message);
+                            //UpdateFaculties();
+                        }
+                    },
+                    failure: function (response) {
+                        alert(response.message);
+                    },
+                    error: function (response) {
+                        alert(response.message);
+                    }
+                });
+
+            });
+        });
+    </script>
+}
+@section navigationbar{
+    <div class="container-fluid page__heading-container">
+        <div class="page__heading d-flex align-items-end">
+            <div class="flex">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a asp-action="Dashboard" asp-controller="Admin">Home</a></li>
+                        <li class="breadcrumb-item active"
+                            aria-current="page">Menu Master</li>
+                    </ol>
+                </nav>
+                <h1 class="m-0 mt-2">Menu List</h1>
+            </div>
+        </div>
+    </div>
+    }
+@* *@
